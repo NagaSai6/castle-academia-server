@@ -3,6 +3,9 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
 function publicUserController() {
   return {
     async handleLogin(req, res) {
@@ -55,8 +58,25 @@ function publicUserController() {
 
     },
     handleUserFormSubmission(req, res) {
-        
+        const msg = {
+            to: 'nagasai317@gmail.com', // Change to your recipient
+            from: 'ch18b053@smail.iitm.ac.in', // Change to your verified sender
+            subject: 'Sending with SendGrid is Fun',
+            text: 'and easy to do anywhere, even with Node.js',
+            html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+          }
+          sgMail
+            .send(msg)
+            .then(() => {
+              console.log('Email sent')
+            })
+            .catch((error) => {
+              console.error(error)
+            })
     },
+    homePage(req,res){
+        return res.status(200).json({message : "Backend server is Good"})
+    }
   };
 }
 
