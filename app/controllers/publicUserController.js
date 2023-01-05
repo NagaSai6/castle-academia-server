@@ -59,6 +59,7 @@ function publicUserController() {
 
     },
     handleUserFormSubmission(req, res) {
+      return res.status(300).json({message : req.body})
         const msg = {
             to: 'nagasai317@gmail.com', // Change to your recipient
             from: 'ch18b053@smail.iitm.ac.in', // Change to your verified sender
