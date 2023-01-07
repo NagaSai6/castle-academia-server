@@ -1,0 +1,91 @@
+[
+  {
+    "category": "crt-module",
+    "category_header": "360° View on CRT Module",
+    "category_desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi",
+
+    "data": [
+      {
+        "sub-category": "CAREER COUNSELLING",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "MOCK INTERVIEW",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "RESUME REVIEW",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "ABROAD STUDIES",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      }
+    ]
+  },
+  {
+    "category": "startup-module",
+    "category_header": "360° View on Startup Module",
+    "category_desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi",
+
+    "data": [
+      {
+        "sub-category": "LEADERSHIP & MANAGEMENT COURSE",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "HOW TO ENROLL COMPANY",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "1:1 SESSION WITH CEO",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "MOCK ON PITCHING",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      }
+    ]
+  },
+  {
+    "category": "abroad-module",
+    "category_header": "360° View on Abroad Studies Module",
+    "category_desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi",
+
+    "data": [
+      {
+        "sub-category": "COLLEGE COUNSELLING",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "EXAM COUNSEL( FREE)",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "EXAM COUNSEL( FREE)",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "UNIVERSITY SHORTLISTING",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      },
+      {
+        "sub-category": "VISA APPROVAL",
+        "file-link": "https://www.africau.edu/images/default/sample.pdf",
+        "content": "put the content here"
+      }
+    ]
+  }
+]
