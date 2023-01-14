@@ -10,6 +10,10 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  role : {
+    type : String,
+    default : "free"
+  }
 },{timestamps : true});
 
 const User = mongoose.model("User", UserSchema);

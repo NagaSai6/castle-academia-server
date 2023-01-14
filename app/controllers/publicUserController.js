@@ -28,7 +28,7 @@ function publicUserController() {
               }
               let data = IsuserExist ;
 
-              let token = jwt.sign({data},process.env.JWT_SECRET,{expiresIn : "48h"});
+              let token = jwt.sign({data},process.env.JWT_SECRET,{expiresIn : "0.01h"});
               return res.status(200).json({message : "logged-in-successfully",token, email : IsuserExist.email})
 
         }).catch((err)=>{
@@ -49,7 +49,7 @@ function publicUserController() {
 
         if(savedUser){
             let data = savedUser ;
-            let token = jwt.sign({data},process.env.JWT_SECRET,{expiresIn : "48h"});
+            let token = jwt.sign({data},process.env.JWT_SECRET,{expiresIn : "0.01h"});
             return res.status(200).json({message: "user created successfully",token,email :savedUser.email})
         }else{
             
