@@ -5,6 +5,7 @@ const decode_jwt = require("jwt-decode");
 const User = require("../models/User");
 
 const sgMail = require("@sendgrid/mail");
+const Lead = require("../models/Lead");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 function publicUserController() {
@@ -34,13 +35,11 @@ function publicUserController() {
             let token = jwt.sign({ data }, process.env.JWT_SECRET, {
               expiresIn: "0.01h",
             });
-            return res
-              .status(200)
-              .json({
-                message: "logged-in-successfully",
-                token,
-                email: IsuserExist.email,
-              });
+            return res.status(200).json({
+              message: "logged-in-successfully",
+              token,
+              email: IsuserExist.email,
+            });
           })
           .catch((err) => {
             return res.status(500).json({ message: "incorrect password", err });
@@ -62,35 +61,60 @@ function publicUserController() {
           let token = jwt.sign({ data }, process.env.JWT_SECRET, {
             expiresIn: "0.01h",
           });
-          return res
-            .status(200)
-            .json({
-              message: "user created successfully",
-              token,
-              email: savedUser.email,
-            });
+          return res.status(200).json({
+            message: "user created successfully",
+            token,
+            email: savedUser.email,
+          });
         } else {
           return res.status(500).json({ message: "failed to save in db" });
         }
       }
     },
     handleUserFormSubmission(req, res) {
-      return res.status(200).json({ message: req.body });
-      const msg = {
-        to: "nagasai317@gmail.com", // Change to your recipient
-        from: "ch18b053@smail.iitm.ac.in", // Change to your verified sender
-        subject: "Sending with SendGrid is Fun",
-        text: "and easy to do anywhere, even with Node.js",
-        html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-      };
-      sgMail
-        .send(msg)
-        .then(() => {
-          console.log("Email sent");
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+      console.log(req.body)
+      if (!req.body.email || !req.body.name) {
+        console.log("inside -1 ")
+        return res.status(400).json({ message: "invalid_form_submission" });
+      }
+
+      if (!validator.isEmail(req.body.email)) {
+        console.log("inside -2 ")
+        return res.status(400).json({ message: "invalid_form_submission" });
+      }
+
+      let lead = new Lead();
+
+      lead.name = req.body.name;
+      lead.email = req.body.email;
+      lead.phoneNumber = req.body.phone ? req.body.phone : req.body.phoneNumber;
+      lead.message = req.body.message ? req.body.message : '' ;
+      lead.course = req.body.courses ? req.body.courses : '';
+
+      lead.save().then((lead) => {
+        console.log(lead)
+        const msg = {
+          to: "nagasai317@gmail.com", // Change to your recipient
+          from: "info@castleacademia.com", // Change to your verified sender
+          subject: `A new Lead is Submitted by ${lead.name}`,
+          replyTo: lead.email,
+          html: `<div> name : ${lead.name} </div>
+                   <div>  phone : ${lead.phoneNumber} </div>
+                   <div>  Interested course : ${lead.course}</div>
+                   <div>  Message : ${lead.message}</div>
+                         `,
+        };
+        sgMail
+          .send(msg)
+          .then(() => {
+            console.log("mail sent");
+            return res.status(200).json({ message: "form_submitted" });
+          })
+          .catch((err) => {
+            console.log(err);
+            return res.status(500).json({ message: "something_went_wrong" });
+          });
+      });
     },
     async handleGoogleSignIn(req, res) {
       if (!req.body.token) {
@@ -140,6 +164,19 @@ function publicUserController() {
         }
       } catch (error) {
         console.log(error);
+      }
+    },
+    async fetchUserRole(req, res) {
+      let queryParam = req.query.id;
+      try {
+        let user = await User.findOne({ _id: queryParam });
+        if (!user) {
+          return res.status(403).json({ message: "authorization_error" });
+        }
+        return res.status(200).json({ data: user.role });
+      } catch (error) {
+        console.log(error);
+        return res.status(503).json({ message: "authorization_error" });
       }
     },
     homePage(req, res) {

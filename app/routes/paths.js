@@ -11,7 +11,8 @@ const paths = (app)=>{
    // google sso 
    app.post('/google-sign-in',publicUserController().handleGoogleSignIn)
    // protected routes
-   app.get("/courses-overview",premiumUserController().fetchCourses)
+   app.get("/courses-overview",premiumUserController().fetchCourses);
+   app.get("/check-user-role",publicUserController().fetchUserRole)
 }
 
 module.exports = paths;

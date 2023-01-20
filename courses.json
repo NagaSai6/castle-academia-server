@@ -8,22 +8,26 @@
       {
         "sub-category": "CAREER COUNSELLING",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": "The main goal of this counselling is to understand your strength & weakness in the subject and assist you in landing a dream job. Especially, to overcome difficulties such as a lack of direction, self-doubt and a lack of confidence"
+        "content": "The main goal of this counselling is to understand your strength & weakness in the subject and assist you in landing a dream job. Especially, to overcome difficulties such as a lack of direction, self-doubt and a lack of confidence",
+         "image" : "crt_1.svg"
       },
       {
         "sub-category": "TRAINING",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": "Castle Academia's exclusive and expert training team assists you in becoming placement ready. Which not only helps to clear in interviews and exams, but also builds confidence in the subject by providing quality learning."
+        "content": "Castle Academia's exclusive and expert training team assists you in becoming placement ready. Which not only helps to clear in interviews and exams, but also builds confidence in the subject by providing quality learning.",
+        "image":"crt_2.svg"
       },
       {
         "sub-category": "MOCK INTERVIEW",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": "We connect you with interviewers from your dream company and provide personalized feedback on preparation to assist in comprehending where you stand in terms of getting placed in your dream company."
+        "content": "We connect you with interviewers from your dream company and provide personalized feedback on preparation to assist in comprehending where you stand in terms of getting placed in your dream company.",
+         "image" : "crt_3.svg"
       },
       {
         "sub-category": "RESUME REVIEW",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": "A resume must speak as loudly as a recruiter desires to hear it. This is only possible if it is reviewed by the appropriate mentor/interviewer."
+        "content": "A resume must speak as loudly as a recruiter desires to hear it. This is only possible if it is reviewed by the appropriate mentor/interviewer.",
+        "image": "crt_4.svg"
       }
     ]
   },
@@ -36,22 +40,26 @@
       {
         "sub-category": "LEADERSHIP & MANAGEMENT COURSE",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": ""
+        "content": "",
+        "image" : "su_1.svg"
       },
       {
         "sub-category": "HOW TO ENROLL COMPANY",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": ""
+        "content": "",
+        "image" : "su_2.svg"
       },
       {
         "sub-category": "1:1 SESSION WITH CEO",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": ""
+        "content": "",
+        "image" : "su_3.svg"
       },
       {
         "sub-category": "MOCK ON PITCHING",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": ""
+        "content": "",
+        "image" : "su_4.svg"
       }
     ]
   },
