@@ -94,9 +94,10 @@ function publicUserController() {
       lead.save().then((lead) => {
         console.log(lead)
         const msg = {
-          to: "nagasai317@gmail.com", // Change to your recipient
+          to: "info@castleacademia.com", // Change to your recipient
           from: "info@castleacademia.com", // Change to your verified sender
           subject: `A new Lead is Submitted by ${lead.name}`,
+          cc : "mohammadayeshasiddika@gmail.com",
           replyTo: lead.email,
           html: `<div> name : ${lead.name} </div>
                    <div>  phone : ${lead.phoneNumber} </div>
