@@ -72,27 +72,32 @@
       {
         "sub-category": "COLLEGE COUNSELLING",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": "put the content here"
+        "content": "",
+        "image": "as_1.svg"
       },
       {
         "sub-category": "EXAM COUNSEL( FREE)",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": "put the content here"
+        "content": "",
+        "image": "as_2.svg"
       },
       {
-        "sub-category": "EXAM COUNSEL( FREE)",
+        "sub-category": "TRAINING IF NEEDED",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": "put the content here"
+        "content": "",
+        "image":"as_3.svg"
       },
       {
         "sub-category": "UNIVERSITY SHORTLISTING",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": "put the content here"
+        "content": "",
+        "image":"as_4.svg"
       },
       {
         "sub-category": "VISA APPROVAL",
         "file-link": "https://www.africau.edu/images/default/sample.pdf",
-        "content": "put the content here"
+        "content": "",
+        "image":"as_5.svg"
       }
     ]
   }
